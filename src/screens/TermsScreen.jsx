@@ -29,6 +29,10 @@ const TermsOfService = () => {
             <p>
               Knowia’yı kullanabilmek için en az 13 yaşında olmanız gerekir.
             </p>
+            <p className="mt-2">
+              13-18 yaş arasındaki kullanıcılar, bu şartları ebeveyn veya yasal
+              vasilerinin onayıyla kabul etmiş sayılırlar.
+            </p>
           </section>
 
           <section>
@@ -36,20 +40,24 @@ const TermsOfService = () => {
               <span>2.</span>Hesaplar
             </h2>
             <ul className="flex flex-col gap-y-2 list-none p-0 ml-4">
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />
-                Hesap bilgilerinizin gizliliğinden siz sorumlusunuz
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />
-                Doğru ve güncel bilgiler sağlamakla yükümlüsünüz
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />
-                Hesabınız üzerinden gerçekleştirilen tüm işlemlerden siz
-                sorumlusunuz
-              </li>
+              {[
+                "Hesap bilgilerinizin gizliliğinden siz sorumlusunuz",
+                "Doğru ve güncel bilgiler sağlamakla yükümlüsünüz",
+                "Hesabınız üzerinden gerçekleştirilen tüm işlemlerden siz sorumlusunuz",
+              ].map((item, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />
+                  {item}
+                </li>
+              ))}
             </ul>
+            <span className="mt-4 block">
+              Hesabınızın yetkisiz kullanımından şüpheleniyorsanız derhal{" "}
+              <a className="text-[#FF6B35]" href="mailto:knowia.app@gmail.com">
+                knowia.app@gmail.com
+              </a>{" "}
+              adresi üzerinden bize bildirimde bulunmalısınız.
+            </span>
           </section>
 
           <section>
@@ -58,22 +66,25 @@ const TermsOfService = () => {
             </h2>
             <p className="mb-4">Kullanıcılar:</p>
             <ul className="flex flex-col gap-y-2 list-none p-0 ml-4">
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
-                Kartlar ve desteler oluşturabilir
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" /> Metin
-                ve görsel yükleyebilir
-              </li>
-              <li className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
-                İçeriklerini diğer kullanıcılarla paylaşabilir
-              </li>
+              {[
+                "Kartlar ve desteler oluşturabilir",
+                "Metin ve görsel yükleyebilir",
+                "İçeriklerini diğer kullanıcılarla paylaşabilir",
+              ].map((item, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
+                  {item}
+                </li>
+              ))}
             </ul>
             <p className="mt-4">
               Paylaşılan içeriklerin yasalara ve üçüncü taraf haklarına uygun
               olmasından kullanıcı sorumludur.
+            </p>
+            <p className="mt-2 italic">
+              İçerik yükleyerek; Knowia'ya bu içeriği uygulama içinde saklamak,
+              görüntülemek ve yaymak için dünya çapında, telifsiz bir kullanım
+              lisansı vermiş olursunuz.
             </p>
           </section>
 
@@ -93,25 +104,33 @@ const TermsOfService = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-              <span>5.</span>Kabul Edilebilir Kullanım
+              <span>5.</span>Kabul Edilebilir Kullanım ve Sıfır Tolerans
             </h2>
-            <p className="mb-4">
-              Kullanıcılar aşağıdaki davranışlarda bulunamaz:
+            <p className="mb-4 text-gray-300">
+              Knowia, topluluk güvenliğini ön planda tutar. Uygulama içerisinde;
+              müstehcenlik, nefret söylemi, şiddet teşviki, zorbalık ve yasadışı
+              içeriklerin paylaşılmasına kesinlikle izin verilmez.
             </p>
             <ul className="flex flex-col gap-y-2 list-none p-0 ml-4">
-              <li className="flex items-center gap-3 text-gray-400">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
-                Yasadışı veya zararlı içerik paylaşmak
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" /> Diğer
-                kullanıcıları rahatsız edici veya kötüye kullanıcı davranışlar
-                sergilemek
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
-                Uygulamanın güvenliğini veya işleyişini bozmak
-              </li>
+              {[
+                "Sıfır Tolerans: Bu kuralları ihlal eden içerikler, bildirim üzerine 24 saat içinde incelenir ve uygunsuz görüldüğü takdirde derhal kaldırılır.",
+                "Yaptırım: Kural ihlali yapan kullanıcıların hesabı askıya alınabilir veya kalıcı olarak silinebilir.",
+                'Raporlama: Kullanıcılar, uygulama içerisindeki "Rapor Et" özelliğini kullanarak her türlü uygunsuz içeriği veya kullanıcıyı bize bildirebilirler.',
+              ].map((item, index) => {
+                const [title, description] = item.split(":");
+                return (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-400"
+                  >
+                    <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full mt-2 flex-shrink-0" />
+                    <p>
+                      <span className="font-bold text-white">{title}:</span>
+                      {description}
+                    </p>
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
@@ -132,14 +151,28 @@ const TermsOfService = () => {
               <span>7.</span>Hesap Sonlandırma
             </h2>
             <p>
-              Bu şartların ihlal edilmesi durumunda kullanıcı hesabı askıya
-              alınabilir veya kalıcı olarak silinebilir.
+              Kullanıcılar, uygulama içerisindeki "Hesabı Sil" butonu ile veya
+              destek e-posta adresi üzerinden hesap silme talebi oluşturabilir.
+            </p>
+            <p className="mt-2">
+              Bu şartların ihlal edilmesi durumunda Knowia, kullanıcı hesabını
+              askıya alabilir veya kalıcı olarak silebilir.
+            </p>
+            <p className="mt-2 text-gray-400">
+              Hesap silme işlemi tamamlandığında, kullanıcıya ait kişisel veriler yasal zorunluluklar hariç sistemimizden temizlenir.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-              <span>8.</span>Sorumluluk Reddi
+              <span>8.</span>Fikri Mülkiyet Hakları
+            </h2>
+            <p>Uygulamanın tasarımı, logoları, metinleri ve yazılım kodları Knowia'ya aittir. İzinsiz kopyalanamaz veya kullanılamaz.</p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <span>9.</span>Sorumluluk Reddi
             </h2>
             <p>Knowia “olduğu gibi” sunulmaktadır.</p>
             <p className="mt-2 text-gray-400">
@@ -149,12 +182,23 @@ const TermsOfService = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-              <span>9.</span>Şartlarda Değişiklik
+              <span>10.</span>Şartlarda Değişiklik
             </h2>
             <p>Bu Kullanım Şartları zaman zaman güncellenebilir.</p>
             <p className="mt-2">
               Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul
               ettiğiniz anlamına gelir.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <span>11.</span>Mağaza Feragatnamesi
+            </h2>
+            <p>
+              Bu sözleşme sadece kullanıcı ile Knowia arasındadır. Apple ve
+              Google uygulamanın içeriğinden veya sunulan destekten sorumlu
+              değildir.
             </p>
           </section>
 

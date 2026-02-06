@@ -34,9 +34,10 @@ const PrivacyPolicy = () => {
                 "Kullanıcı adı",
                 "Profil fotoğrafı",
                 "Öğrenme ilerlemesi ve uygulama içi aktiviteler",
-                "Kullanıcı tarafından oluşturulan kartlar ve desteler",
+                "Kullanıcı tarafından oluşturulan kartlar, desteler ve yüklenen görseller",
                 "Geri bildirim formları veya e-posta yoluyla gönderilen mesajlar",
                 "Cihaz türü, işletim sistemi ve uygulama sürümü gibi teknik bilgiler",
+                "Uygulama performansını ve kararlılığını iyileştirmek amacıyla anonimleştirilmiş teknik bilgiler ve hata günlükleri (crash logs) toplanmaktadır.",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
                   <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full" />{" "}
@@ -96,8 +97,10 @@ const PrivacyPolicy = () => {
                 Bu hizmetler yalnızca gerekli verileri işler ve geçerli veri
                 koruma düzenlemelerine uygun şekilde çalışır.
                 <br />
-                Kullanıcı verileri, hizmet sağlayıcıların yurt dışındaki (Avrupa
-                Birliği veya ABD) sunucularında işlenebilir.
+                Kullanıcı verileri, Supabase altyapısı üzerinden güvenli bir
+                şekilde şifrelenerek saklanmakta ve sunucu konumlarına bağlı
+                olarak uluslararası veri koruma standartlarına uygun şekilde
+                yurt dışına(Avrupa Birliği, ABD) aktarılabilmektedir.
               </p>
             </div>
           </section>
@@ -135,13 +138,21 @@ const PrivacyPolicy = () => {
               karşı uygun teknik ve idari güvenlik önlemleriyle korunur.
             </p>
             <p className="mt-2">
-              Kullanıcılar, uygulama içerisindeki profil sekmesindeki “Hesabı Sil” seçeneği
-              üzerinden hesap silme talebi oluşturabilir. Talep oluşturulduktan
-              sonra hesap pasif hale getirilir ve uygulamaya erişim engellenir.
-              Hesap ve ilişkili veriler makul bir süre(en geç 30 gün) içerisinde kalıcı olarak
-              silinir.
+              Kullanıcılar, uygulama içerisindeki profil sekmesindeki “Hesabı
+              Sil” seçeneği üzerinden hesap silme talebi oluşturabilir. Talep
+              oluşturulduktan sonra hesap pasif hale getirilir ve uygulamaya
+              erişim engellenir. Hesap ve ilişkili veriler makul bir süre(en geç
+              30 gün) içerisinde kalıcı olarak silinir.
             </p>
-            <p className="text-sm text-gray-500 pt-4 italic">Alternatif olarak, destek ekibimizle e-posta yoluyla iletişime geçerek de hesap silme talebinde bulunabilirler.</p>
+            <p className="text-sm text-gray-500 pt-4 italic">
+              Alternatif olarak, destek ekibimizle e-posta yoluyla iletişime
+              geçerek de hesap silme talebinde bulunabilirler.
+            </p>
+            <p className="mt-4 italic text-gray-400">
+              Hesap silme işlemi gerçekleştirildiğinde; profil bilgileriniz,
+              oluşturduğunuz içerikler ve uygulama içi verileriniz geri
+              döndürülemez şekilde sistemden temizlenir.
+            </p>
           </section>
 
           <section>
@@ -179,6 +190,12 @@ const PrivacyPolicy = () => {
               <li>Verilerin düzeltilmesini veya silinmesini talep etme</li>
               <li>Verilerinizin işlenmesine ilişkin onayınızı geri çekme</li>
             </ul>
+            <p className="mt-4 text-gray-400 italic">
+              Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse
+              bilgi talep etme ve eksik/yanlış işlenen verilerin düzeltilmesini
+              isteme haklarına sahipsiniz. Bu haklarınızı kullanmak için
+              iletişim e-postamız üzerinden bize ulaşabilirsiniz.
+            </p>
           </section>
 
           <section>
