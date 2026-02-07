@@ -1,9 +1,8 @@
-import React from "react";
 import aboutMockup from "../assets/aboutmobil.png";
 
 export default function About() {
   return (
-    <section className="mt-10">
+    <section className="mt-20">
       <div className="max-w-6xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* METİN */}
         <div className="text-white">
