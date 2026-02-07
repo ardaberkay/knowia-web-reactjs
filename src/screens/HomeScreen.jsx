@@ -12,11 +12,16 @@ import Apple from "../assets/apple.svg";
 
 export default function HomeScreen() {
   return (
-    <div className="flex flex-row justify-center items-center h-full mt-8">
+    <div className="flex md:flex-row flex-col pb-12 justify-center items-center h-full mt-8  ">
       <div className="flex flex-1 flex-col items-center justify-center p-8">
-        <div className="absolute w-[350px] h-[350px] bg-[#FF6B35] blur-[120px] rounded-full -z-10 custom-glow"></div>
         <div
-          className="floating-icon top-[25%] left-[15%]"
+          className="absolute 
+          md:w-[350px] md:h-[350px] md:left-auto md:translate-x-0
+          w-[80vw] h-[80vw] left-1/2 -translate-x-1/2
+          bg-[#FF6B35] blur-[120px] rounded-full -z-10 custom-glow"
+        ></div>
+        <div
+          className="floating-icon md:top-[25%] md:left-[15%] top-[28%] left-[6%]"
           style={{ animationDelay: "0s" }}
         >
           <GraduationCap
@@ -26,7 +31,7 @@ export default function HomeScreen() {
           />
         </div>
         <div
-          className="floating-icon bottom-[35%] left-[12%]"
+          className="floating-icon md:bottom-[35%] md:left-[12%] bottom-[36%] left-[12%]"
           style={{ animationDelay: "1s" }}
         >
           <Brain
@@ -36,7 +41,7 @@ export default function HomeScreen() {
           />
         </div>
         <div
-          className="floating-icon top-[22%] left-[44%]"
+          className="floating-icon md:top-[22%] md:left-[44%] top-[16%] right-[8%]"
           style={{ animationDelay: "2s" }}
         >
           <Sparkles
@@ -46,7 +51,7 @@ export default function HomeScreen() {
           />
         </div>
         <div
-          className="floating-icon bottom-[12%] left-[38%]"
+          className="floating-icon md:bottom-[12%] md:left-[38%] bottom-[32%] right-[8%]"
           style={{ animationDelay: "3s" }}
         >
           <DraftingCompass
@@ -68,19 +73,21 @@ export default function HomeScreen() {
         <div className="mb-2">
           <AnimatedCard />
         </div>
-        <div className="select-none">
-          <h1 className="text-8xl font-bold tracking-tight">Knowia</h1>
+        <div className="select-none mt-10 md:mt-0">
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tight">
+            Knowia
+          </h1>
         </div>
       </div>
       <div className="flex-1 flex items-center flex-col justify-center">
         <div>
-          <h1 className="text-6xl text-white text-right font-semibold">
+          <h1 className=" text-4xl md:text-6xl text-white text-right font-semibold">
             Bilgiyi Keşfetmenin <br /> En Dinamik Yolu
           </h1>
         </div>
-        <div className="flex gap-4 mt-8 justify-end w-full px-10">
+        <div className="flex gap-4 flex-col sm:flex-row mt-10 justify-center md:justify-end w-full md:px-5">
           {/* App Store Butonu */}
-          <button className="bg-white text-black flex items-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg shadow-md border border-gray-100 cursor-pointer group">
+          <button className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto">
             <img src={Apple} alt="Apple App Store" className="w-6 h-6" />
             <div className="flex flex-col items-start leading-none">
               <span className="text-[10px] font-bold uppercase opacity-50 mb-0.5">
@@ -91,9 +98,8 @@ export default function HomeScreen() {
               </span>
             </div>
           </button>
-
           {/* Play Store Butonu */}
-          <button className="bg-white text-black flex items-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg shadow-md border border-gray-100 cursor-pointer group">
+          <button className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto">
             <img src={Google} alt="Google Play" className="w-6 h-6" />
             <div className="flex flex-col items-start leading-none">
               <span className="text-[10px] font-bold uppercase opacity-50 mb-0.5">

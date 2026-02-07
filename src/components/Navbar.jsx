@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-6 z-[100]">
-      <div className="max-w-7xl mx-auto px-4 md:px-0 relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-0 lg:px-4 relative">
         {/* ANA NAVBAR KARTINI SARMALAYAN YAPI */}
         <div
           className={`relative h-18 flex items-center justify-between px-8 md:px-12 transition-all duration-500 rounded-[40px] border border-white/20 shadow-xl z-[110]
