@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const PrivacyPolicy = () => {
+export default function PrivcayPolicy () {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen">
@@ -187,5 +187,3 @@ const PrivacyPolicy = () => {
     </div>
   );
 };
-
-export default PrivacyPolicy;

@@ -2,7 +2,7 @@ import React from "react";
 import { Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const TermsOfService = () => {
+export default function TermsScreen () {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen">
@@ -181,5 +181,3 @@ const TermsOfService = () => {
     </div>
   );
 };
-
-export default TermsOfService;
