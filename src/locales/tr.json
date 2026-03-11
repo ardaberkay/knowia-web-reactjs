@@ -213,5 +213,11 @@
 
     "header12": "İletişim",
     "item91": "Sorularınız ve geri bildirimleriniz için:"
+  },
+  "download": {
+    "title": "Knowia'ya Yönlendiriliyorsunuz...",
+    "description": "Cihazınıza uygun uygulama mağazası açılıyor.",
+    "appStore": "App Store'dan İndir",
+    "playStore": "Google Play'den İndir"
   }
 }

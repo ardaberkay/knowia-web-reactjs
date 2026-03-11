@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full bg-transparent px-4 bottom-0 mt-auto">
       <div className="max-w-7xl mx-auto border-t border-gray-400 px-4 flex flex-col md:flex-row items-center py-4 justify-between gap-4 md:gap-0 text-center md:text-left">
         <div>
-          <p className="text-sm">Powered by BB Software</p>
+          <p className="text-sm">Powered by BB Nova</p>
         </div>
         <div>
           <p className="text-sm">

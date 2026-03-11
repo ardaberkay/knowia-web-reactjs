@@ -205,5 +205,11 @@
 
     "header12": "Contact",
     "item91": "For questions and feedback:"
+  },
+  "download": {
+    "title": "Redirecting to Knowia...",
+    "description": "Opening the appropriate app store for your device.",
+    "appStore": "Download on the App Store",
+    "playStore": "Get it on Google Play"
   }
 }

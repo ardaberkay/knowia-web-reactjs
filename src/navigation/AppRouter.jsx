@@ -6,6 +6,7 @@ import Guide from "../screens/GuideScreen";
 import Contact from "../screens/ContactScreen";
 import Policy from "../screens/PolicyScreen";
 import Terms from "../screens/TermsScreen";
+import Download from "../screens/DownloadScreen"
 
 export default function AppRouter() {
   return (
@@ -15,7 +16,8 @@ export default function AppRouter() {
       <Route path="/guide" element={<Guide />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/policy" element={<Policy />} />
-      <Route path="/terms" element={<Terms />} />
+      <Route path="/terms" element={<Terms />} /> 
+      <Route path="/download" element={<Download/>} />
     </Routes>
   );
 }

@@ -13,6 +13,9 @@ import { useTranslation } from "react-i18next";
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+  const googlePlay = "https://knowia.online/download";
+  const appleStore = "https://knowia.online";
+
   return (
     <div className="flex md:flex-row flex-col pb-12 justify-center items-center h-full mt-8  ">
       <div className="flex flex-1 flex-col items-center justify-center p-8">
@@ -89,8 +92,13 @@ export default function HomeScreen() {
         </div>
         <div className="flex gap-4 flex-col sm:flex-row mt-10 justify-center md:justify-end w-full md:px-5">
           {/* App Store Butonu */}
-          <button className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto">
-            <img src={Apple} alt="Apple App Store" className="w-6 h-6" />
+          <a 
+            href={appleStore}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto"
+          >            
+          <img src={Apple} alt="Apple App Store" className="w-6 h-6" />
             <div className="flex flex-col items-start leading-none">
               <span className="text-[10px] font-semibold uppercase opacity-50 mb-0.5">
                 Download on the
@@ -99,10 +107,15 @@ export default function HomeScreen() {
                 App Store
               </span>
             </div>
-          </button>
+          </a>
           {/* Play Store Butonu */}
-          <button className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto">
-            <img src={Google} alt="Google Play" className="w-6 h-6" />
+          <a 
+            href={googlePlay}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white text-black flex items-center justify-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 transition-all shadow-lg border border-gray-100 cursor-pointer group w-full sm:w-auto"
+          >            
+          <img src={Google} alt="Google Play" className="w-6 h-6" />
             <div className="flex flex-col items-start leading-none">
               <span className="text-[10px] font-semibold uppercase opacity-50 mb-0.5">
                 Get it on
@@ -111,7 +124,7 @@ export default function HomeScreen() {
                 Google Play
               </span>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>
