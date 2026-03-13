@@ -113,16 +113,51 @@ export default function PolicyScreen() {
             </h2>
             <p>{t("privacyPolicy.item51")}</p>
             <p className="mt-2">{t("privacyPolicy.item52")}</p>
-            <h2 className="text-xl font-bold italic text-white mb-4 mt-4 flex items-center gap-3">
+            <h2
+              id="delete-account"
+              className="text-2xl font-bold text-white mb-4 mt-8 flex items-center gap-3 scroll-mt-[45vh]"
+            >
               {t("privacyPolicy.accountDelete")}
             </h2>
-            <p className="mt-2">{t("privacyPolicy.item53")}</p>
-            <p className="mt-4 italic text-gray-400">
-              {t("privacyPolicy.subText4")}
-            </p>
-            <p className="text-sm text-gray-500 pt-4 italic">
-              {t("privacyPolicy.subText5")}
-            </p>
+
+            <div className="mt-4 p-5 border-l border-white/10 bg-white/[0.02]">
+              <p className="text-gray-200 leading-relaxed text-base">
+                {t("privacyPolicy.item53_part1")}{" "}
+                <a
+                  href="https://www.knowia.online/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30"
+                >
+                  {t("privacyPolicy.contactLink")}
+                </a>{" "}
+                {t("privacyPolicy.item53_part2")}{" "}
+                <a
+                  href="mailto:knowia.app@gmail.com"
+                  className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30"
+                >
+                  knowia.app@gmail.com
+                </a>{" "}
+                {t("privacyPolicy.item53_part3")}
+              </p>
+
+              {/* Modern Güvenlik Notu Alanı */}
+              <div className="mt-6 p-4 rounded-xl bg-[#FF6B35]/5 border border-[#FF6B35]/20">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35]" />
+                  <span className="text-[#FF6B35] text-xs font-bold uppercase tracking-wider">
+                    {t("privacyPolicy.securityNote")}
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  {t("privacyPolicy.subText4")}
+                </p>
+              </div>
+
+              <p className="mt-6 text-[11px] text-gray-500 uppercase tracking-widest opacity-50">
+                {t("privacyPolicy.subText5")}
+              </p>
+            </div>
           </section>
 
           <section>

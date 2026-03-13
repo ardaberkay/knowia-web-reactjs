@@ -106,9 +106,15 @@
     "header5": "Data Retention",
     "item51": "Personal data is retained for as long as necessary to provide the service.",
     "item52": "Personal data is protected by appropriate technical and administrative security measures against unauthorized access, loss, or misuse.",
-    "item53": "Users may permanently delete their account through the “Delete Account” option available in the Profile section of the application.",
-    "subText4": "Once the account deletion request is confirmed by the user, the account and all associated personal data are permanently and irreversibly deleted from the system. Deleted data cannot be restored or reactivated. Records that are required to be retained under applicable legal obligations may be excluded from deletion.",
-    "subText5": "Alternatively, users may request account deletion by contacting our support team via email.",
+
+    "accountDeletes": "Account and Data Deletion",
+    "item53_part1": "You have the right to permanently delete your account and all associated data. You can initiate this process via the 'Delete Account' button within the app, or if you cannot access the app, by filling out the form on our",
+    "contactLink": "contact page",
+    "item53_part2": " (selecting 'Account Issues' as the subject) or by sending an email to",
+    "item53_part3": ".",
+    "securityNote": "Security Verification",
+    "subText4": "For your security, a confirmation message will be sent to your registered email address for requests submitted via form or email. Requests without verification will not be processed.",
+    "subText5": "Deleted data cannot be recovered. Records under legal obligations may be excluded.",
 
     "header6": "Children’s Privacy",
     "item61": "Knowia is designed for users aged 13 and above.",
@@ -139,7 +145,6 @@
     ],
     "item113": "Reported content may be reviewed, and if it is found to violate community guidelines, it may be removed. In appropriate cases, the related user account may be temporarily suspended or permanently terminated.",
     "accountDelete": "Account Deletion"
-
   },
   "termsService": {
     "title": "Terms of Service",
