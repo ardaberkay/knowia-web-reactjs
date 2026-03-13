@@ -1,9 +1,67 @@
 import React from "react";
 import { Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function PolicyScreen() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const id = hash.replace("#", "");
+
+    // Manuel yumuşak kaydırma motoru
+    const smoothScrollTo = (targetY) => {
+      const startY = window.pageYOffset;
+      const distance = targetY - startY;
+      const duration = 800; // 800ms sürecek (yavaş ve tatlı bir kayma)
+      let start = null;
+
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percentage = Math.min(progress / duration, 1);
+
+        // Easing fonksiyonu (yavaş başla - hızlan - yavaş dur)
+        const ease =
+          percentage < 0.5
+            ? 2 * percentage * percentage
+            : -1 + (4 - 2 * percentage) * percentage;
+
+        window.scrollTo(0, startY + distance * ease);
+
+        if (progress < duration) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    const checkAndScroll = () => {
+      const element = document.getElementById(id);
+      if (element) {
+        const elementPosition =
+          element.getBoundingClientRect().top + window.pageYOffset;
+        // Ekranın tam ortasına hizalamak için:
+        const targetY =
+          elementPosition - window.innerHeight / 2 + element.clientHeight / 2;
+
+        // Sayfa yüklenir yüklenmez değil, 500ms sonra (kullanıcı görsün diye) başlat
+        setTimeout(() => smoothScrollTo(targetY), 500);
+        return true;
+      }
+      return false;
+    };
+
+    // Elementin yüklenmesini bekle
+    const interval = setInterval(() => {
+      if (checkAndScroll()) clearInterval(interval);
+    }, 100);
+
+    setTimeout(() => clearInterval(interval), 3000);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-6 py-15">
