@@ -113,6 +113,9 @@ export default function PolicyScreen() {
             </h2>
             <p>{t("privacyPolicy.item51")}</p>
             <p className="mt-2">{t("privacyPolicy.item52")}</p>
+            <h2 className="text-xl font-bold italic text-white mb-4 mt-4 flex items-center gap-3">
+              {t("privacyPolicy.accountDelete")}
+            </h2>
             <p className="mt-2">{t("privacyPolicy.item53")}</p>
             <p className="mt-4 italic text-gray-400">
               {t("privacyPolicy.subText4")}

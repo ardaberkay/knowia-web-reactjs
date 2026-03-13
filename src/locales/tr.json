@@ -146,7 +146,8 @@
       "Kullanıcılar diğer kullanıcıları engelleyebilir.",
       "Kullanıcılar istemedikleri içerikleri gizleyebilir."
     ],
-    "item113": "Şikayet edilen içerikler incelenebilir ve topluluk kurallarını ihlal ettiği tespit edilirse kaldırılabilir. Gerekli durumlarda ilgili kullanıcı hesabı askıya alınabilir veya kalıcı olarak kapatılabilir."
+    "item113": "Şikayet edilen içerikler incelenebilir ve topluluk kurallarını ihlal ettiği tespit edilirse kaldırılabilir. Gerekli durumlarda ilgili kullanıcı hesabı askıya alınabilir veya kalıcı olarak kapatılabilir.",
+    "accountDelete": "Hesap Silme"
   },
   "termsService": {
     "title": "Kullanım Şartları",

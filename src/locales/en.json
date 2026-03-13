@@ -137,7 +137,9 @@
       "Users may block other users.",
       "Users may hide content they do not wish to see."
     ],
-    "item113": "Reported content may be reviewed, and if it is found to violate community guidelines, it may be removed. In appropriate cases, the related user account may be temporarily suspended or permanently terminated."
+    "item113": "Reported content may be reviewed, and if it is found to violate community guidelines, it may be removed. In appropriate cases, the related user account may be temporarily suspended or permanently terminated.",
+    "accountDelete": "Account Deletion"
+
   },
   "termsService": {
     "title": "Terms of Service",
